@@ -8,13 +8,21 @@ font-family: 'Oswald', sans-serif;
 
 }
 
+#superBox {
+    width: 50px;
+    height: 50px;
+    background: red;
+    position: fixed;
+    z-index: 9999;
+}
+
 body {
     overflow-x: hidden;
     margin: 0px;
 }
 
 #BodyFoodGridCard {
-    z-index: 100;
+    z-index: 10;
     background: white;
     position: absolute;
     width: 100vw;
@@ -25,7 +33,8 @@ body {
     animation-fill-mode: forwards;
 }
 #BodyFoodCard {
-    position: absolute;
+    z-index: 0;
+    position: fixed;
     width: 100vw;
     animation-name: ;
     animation-duration: 1s;
@@ -64,27 +73,60 @@ body {
 #BodyFoodGridCard #FoodGrid {
     margin: var(--card_margin) auto;
     width: calc(100% - var(--card_margin) * 2);
-    height: calc(100vh - 58px);
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     grid-gap: 10px;
 }
 #BodyFoodGridCard .card {
     background-color: rgb(212, 212, 212);
-    aspect-ratio: 15/16;
+    aspect-ratio: 14.5/16;
     border-radius: 10px;
     cursor: pointer;
     box-shadow: rgba(0, 0, 0, 0.5) 0px 10px 10px -5px;
     transition: .25s background-color;
 }
-#BodyFoodGridCard .card .image::after {
+#BodyFoodGridCard .card h3 {
+    font-family: 'Oswald', sans-serif;
+    /* white-space: nowrap; */
+    margin: 5px 0 0 10px;
+    width: 100%;
+    font-size: clamp(9px,4vw,18px);
+}
+#BodyFoodGridCard .card h3 .CardFoodCountry {
+    font-size: clamp(4px,4vw,15);
+
+}
+@media only screen and (max-width: 509px) {
+    #BodyFoodGridCard .card {
+        /* background-color: rgb(150, 40, 40); */
+        aspect-ratio: 15.5/16;
+    }
+}
+@media only screen and (max-width: 349px) {
+    #BodyFoodGridCard .card {
+        /* background-color: rgb(250, 41, 41); */
+        aspect-ratio: 17/16;
+    }
+    #BodyFoodGridCard .card h3 {
+        font-family: 'Oswald', sans-serif;
+        /* white-space: nowrap; */
+        margin: 5px 0 0 10px;
+        width: 100%;
+        font-size: clamp(9px,5.5vw,25px);
+    }
+    #BodyFoodGridCard .card h3 .CardFoodCountry {
+        font-size: clamp(4px,5.5,18px);
+    
+    }
+}
+/* #BodyFoodGridCard .card .image::after {
     content: '';
     width: 100%;
     height: 100%;
     position: absolute;
     backdrop-filter: blur(0px);
     transition: .25s;
-}
+} */
 #BodyFoodGridCard .card:hover .image::after {
     /* backdrop-filter: blur(3px); */
 }
@@ -101,17 +143,6 @@ body {
     background-size: cover;
     position: relative;
 }
-#BodyFoodGridCard .card h3 {
-    font-family: 'Oswald', sans-serif;
-    /* white-space: nowrap; */
-    margin: 5px 0 0 10px;
-    width: 100%;
-    font-size: clamp(9px,4vw,18px);
-}
-#BodyFoodGridCard .card h3 .CardFoodCountry {
-    font-size: clamp(4px,4vw,15);
-
-}
 
 #back_btn {
     z-index: 10;
@@ -119,18 +150,26 @@ body {
     left: 15px;
     position: absolute;
     text-decoration: none;
-    width: 40px;
+    width: clamp(30px,8vw,50px);
     aspect-ratio: 1;
     font-size: 35px;
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.4);
     backdrop-filter: blur(5px);
     box-shadow: rgba(0, 0, 0, 0.5) 2px 2px 2px, inset rgba(255, 255, 255, 0.25) 2px 2px 5px;
-    
     transition: .25s background;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 #back_btn:hover {
     background: rgba(209, 209, 209, 0.5);
+}
+#back_btn img {
+    position: absolute;
+    width: 80%;
+
 }
 
 #top_background {
