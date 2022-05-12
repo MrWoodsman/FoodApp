@@ -5,29 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    
     <title>FoodApp</title>
 </head>
-<body class="" >
-    <!-- <div id="superBox"></div> -->
+<body>
+<!-- VIEW - FoodGrid -->
 <section id="BodyFoodGridCard">
+    <!-- NAWIGACJA STRONY UP -->
     <nav><h3>Food List</h3></nav>
-    <section id="FoodGrid">
-        <!--  -->
-    </section>
+    <!-- LISTA DAN -->
+    <section id="FoodGrid"></section>
 </section>
-
+<!-- VIEW - FoodCard -->
 <section id="BodyFoodCard">
+    <!-- BACK BUTTON -->
     <a href="#" id="back_btn" class="previous round" onclick="BackToGrid()"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Ic_arrow_back_48px.svg/1024px-Ic_arrow_back_48px.svg.png" alt=""></a>
+    <!-- TOP FOOD IMAGE -->
     <div id="top_background"></div>
     <!-- MAIN CARD -->
     <div id="bottom_card">
         <div>
+            <!-- NAZWA DANIA / KRAJ DANIA -->
             <h2><span id="foodName">Nazwa</span> <span id="foodCountry">Kraj</span></h2>
+            <!-- OPIS DANIA -->
             <p id="foodDescription" class=""><span class="tab"></span>OPIS</p>
         </div>
     </div>
 </section>
+<!--  -->
 </body>
     <script src="index.js"></script>
 </html>

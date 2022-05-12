@@ -5,7 +5,6 @@ font-family: 'Oswald', sans-serif;
 :root {
     /* --dev_color: red; */
     --card_margin: 20px;
-
 }
 
 #superBox {
@@ -119,17 +118,6 @@ body {
     
     }
 }
-/* #BodyFoodGridCard .card .image::after {
-    content: '';
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    backdrop-filter: blur(0px);
-    transition: .25s;
-} */
-#BodyFoodGridCard .card:hover .image::after {
-    /* backdrop-filter: blur(3px); */
-}
 #BodyFoodGridCard .card:hover{
     background-color: rgb(199, 199, 199);
 }
@@ -138,7 +126,6 @@ body {
     width: 100%;
     aspect-ratio: 16/11;
     border-radius: 10px 10px 0 0;
-    /* background-image: url('https://www.expatica.com/app/uploads/sites/5/2014/05/french-food-1920x1080.jpg'); */
     background-position: center;
     background-size: cover;
     position: relative;
