@@ -75,6 +75,7 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     grid-gap: 10px;
+    padding-bottom: 30px;
 }
 #BodyFoodGridCard .card {
     background-color: rgb(212, 212, 212);
@@ -130,7 +131,6 @@ body {
     background-size: cover;
     position: relative;
 }
-
 #back_btn {
     z-index: 10;
     top: 15px;
