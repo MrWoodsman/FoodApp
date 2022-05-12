@@ -9,6 +9,7 @@ font-family: 'Oswald', sans-serif;
 }
 
 body {
+    overflow-x: hidden;
     margin: 0px;
 }
 
@@ -84,7 +85,7 @@ body {
     transition: .25s;
 }
 #BodyFoodGridCard .card:hover .image::after {
-    backdrop-filter: blur(3px);
+    /* backdrop-filter: blur(3px); */
 }
 #BodyFoodGridCard .card:hover{
     background-color: rgb(199, 199, 199);
