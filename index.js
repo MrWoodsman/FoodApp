@@ -4,18 +4,18 @@ const ViewFoodCard = document.getElementById('BodyFoodCard')
 function BackToGrid() {
   ViewFoodGrid.style.animationName = 'Rin'
   ViewFoodCard.style.animationName = 'Lout'
-  // ViewFoodGrid.style.display = 'block'
-  // setTimeout(() => {
-  //   ViewFoodCard.style.display = 'none'
-  // }, 950);
+  ViewFoodGrid.style.display = 'block'
+  setTimeout(() => {
+    ViewFoodCard.style.display = 'none'
+  }, 950);
 }
 function BackToCard() {
   ViewFoodGrid.style.animationName = 'Rout'
   ViewFoodCard.style.animationName = 'Lin'
-  // ViewFoodCard.style.display = 'block'
-  // setTimeout(() => {
-  //   ViewFoodGrid.style.display = 'none'
-  // }, 950);
+  ViewFoodCard.style.display = 'block'
+  setTimeout(() => {
+    ViewFoodGrid.style.display = 'none'
+  }, 950);
 }
 
 function CardClick(object) {
@@ -36,5 +36,5 @@ function CardClick(object) {
   
   // console.log(FName+' : '+FCountry+' : '+image)
   // VIEW
-  BackToCard()
+  // BackToCard()
 }
