@@ -64,6 +64,7 @@ body {
 #BodyFoodGridCard #FoodGrid {
     margin: var(--card_margin) auto;
     width: calc(100% - var(--card_margin) * 2);
+    height: calc(100vh - 58px);
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     grid-gap: 10px;
