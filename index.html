@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    
+    <title>Document</title>
+</head>
+<body class="" >
+<section id="BodyFoodGridCard">
+    <nav><h3>Food List</h3></nav>
+    <section id="FoodGrid">
+        <a onclick="CardClick(this)" class="card">
+            <div class="image" style="background-image: url('https://www.expatica.com/app/uploads/sites/5/2014/05/french-food-1920x1080.jpg');"></div>
+            <h3>
+                <span class="CardFoodName">Bœuf bourguignon</span><br>
+                <span class="CardFoodCountry">Francja</span>
+                <span class="hide CardFoodDescription">Nie ma bardziej typowo francuskich dań niż bœuf bourguignon. Potrawa ta pochodzi z tego samego regionu co coq au vin - Burgundii we wschodniej Francji - i istnieją podobieństwa między tymi dwoma daniami. Bœuf bourguignon to zasadniczo gulasz z wołowiny duszonej w czerwonym winie, bulionie wołowym i przyprawionych warzywach, takich jak cebula perłowa i grzyby. Pierwotnie było to danie chłopskie, a obecnie jest to podstawa we francuskich restauracjach na całym świecie. Tradycyjnie tanie kawałki mięsa poddaje się dwudniowej obróbce cieplnej w winie, aby zintensyfikować ich smak, choć można też pójść na skróty. W sierpniu każdego roku w Burgundii odbywa się święto Charolais (Fête du Charolais), podczas którego nie brakuje muzyki i wina.</span>
+            </h3>
+        </a>
+        <a onclick="CardClick(this)" class="card">
+            <div class="image" style="background-image: url('https://www.expatica.com/app/uploads/sites/5/2014/05/chocolate-souffle%CC%81-1536x1024.jpg');"></div>
+            <h3>
+                <span class="CardFoodName">Chocolate soufflé</span><br>
+                <span class="CardFoodCountry">Francja</span>
+                <span class="hide CardFoodDescription">Słowo suflet pochodzi od francuskiego czasownika "dmuchać" i, jak sama nazwa wskazuje, jest to lekki, zwiewny deser. Potrawa ta pochodzi z początku XVIII wieku, a obecnie jest podstawą menu deserowego na całym świecie. Chrupiąca, czekoladowa skórka doskonale nadaje się do tego, aby kremowa czekolada mogła wypłynąć na wierzch, sprawiając bogatą niespodziankę. Suflet nie musi być jednak słodki. Jeśli masz ochotę na coś bardziej słonego, suflety serowe są równie pyszne.</span>
+            </h3>
+        </a>
+        <a onclick="CardClick(this)" class="card">
+            <div class="image" style="background-image: url('https://www.expatica.com/app/uploads/sites/5/2014/05/ratatouille-1536x1024.jpg');"></div>
+            <h3>
+                <span class="CardFoodName">Ratatouille</span><br>
+                <span class="CardFoodCountry">Francja</span>
+                <span class="hide CardFoodDescription">Ratatouille to nie tylko sympatyczna kreskówka o przyjaznym szczurze, ale także jedno z najbardziej kultowych dań kuchni francuskiej. Pochodzi z Prowansji i polega na płytkim podsmażaniu warzyw, a następnie układaniu ich w naczyniu do zapiekania przed zapieczeniem w piekarniku. Francuscy kucharze od wieków spierają się, czy warzywa wymagają wcześniejszego gotowania, ale niezależnie od sposobu przyrządzenia, efekt jest znakomity. To tradycyjne chłopskie danie może być dodatkiem, przystawką lub daniem głównym i doskonale smakuje z czerwonym winem i świeżym, chrupiącym chlebem. Podobnym baskijskim daniem jest pipérade, w którym do duszonej mieszanki warzyw dodaje się szynkę, a czasem jajka.</span>
+            </h3>
+        </a>
+    </section>
+</section>
+
+<section id="BodyFoodCard">
+    <a href="#" id="back_btn" class="previous round" onclick="BackToGrid()"></a>
+    <div id="top_background"></div>
+    <!-- MAIN CARD -->
+    <div id="bottom_card">
+        <div>
+            <h2><span id="foodName">Nazwa</span> <span id="foodCountry">Kraj</span></h2>
+            <p id="foodDescription" class=""><span class="tab"></span>OPIS</p>
+            
+        </div>
+    </div>
+</section>
+</body>
+    <script src="index.js"></script>
+</html>
