@@ -4,62 +4,73 @@
         "Name": "Bœuf bourguignon",
         "Country": "Francja",
         "ImgUrl": "https://www.expatica.com/app/uploads/sites/5/2014/05/french-food-1920x1080.jpg",
-        "Description": "Nie ma bardziej typowo francuskich dań niż bœuf bourguignon. Potrawa ta pochodzi z tego samego regionu co coq au vin - Burgundii we wschodniej Francji - i istnieją podobieństwa między tymi dwoma daniami. Bœuf bourguignon to zasadniczo gulasz z wołowiny duszonej w czerwonym winie, bulionie wołowym i przyprawionych warzywach, takich jak cebula perłowa i grzyby. Pierwotnie było to danie chłopskie, a obecnie jest to podstawa we francuskich restauracjach na całym świecie. Tradycyjnie tanie kawałki mięsa poddaje się dwudniowej obróbce cieplnej w winie, aby zintensyfikować ich smak, choć można też pójść na skróty. W sierpniu każdego roku w Burgundii odbywa się święto Charolais (Fête du Charolais), podczas którego nie brakuje muzyki i wina."
+        "Description": "Nie ma bardziej typowo francuskich dań niż bœuf bourguignon. Potrawa ta pochodzi z tego samego regionu co coq au vin - Burgundii we wschodniej Francji - i istnieją podobieństwa między tymi dwoma daniami. Bœuf bourguignon to zasadniczo gulasz z wołowiny duszonej w czerwonym winie, bulionie wołowym i przyprawionych warzywach, takich jak cebula perłowa i grzyby. Pierwotnie było to danie chłopskie, a obecnie jest to podstawa we francuskich restauracjach na całym świecie. Tradycyjnie tanie kawałki mięsa poddaje się dwudniowej obróbce cieplnej w winie, aby zintensyfikować ich smak, choć można też pójść na skróty. W sierpniu każdego roku w Burgundii odbywa się święto Charolais (Fête du Charolais), podczas którego nie brakuje muzyki i wina.",
+        "Status": "true"
     },
     {
         "ID":2,
         "Name": "Chocolate soufflé",
         "Country": "Francja",
         "ImgUrl": "https://www.expatica.com/app/uploads/sites/5/2014/05/chocolate-souffle%CC%81-1536x1024.jpg",
-        "Description": "Słowo suflet pochodzi od francuskiego czasownika 'dmuchać' i, jak sama nazwa wskazuje, jest to lekki, zwiewny deser. Potrawa ta pochodzi z początku XVIII wieku, a obecnie jest podstawą menu deserowego na całym świecie. Chrupiąca, czekoladowa skórka doskonale nadaje się do tego, aby kremowa czekolada mogła wypłynąć na wierzch, sprawiając bogatą niespodziankę. Suflet nie musi być jednak słodki. Jeśli masz ochotę na coś bardziej słonego, suflety serowe są równie pyszne."
+        "Description": "Słowo suflet pochodzi od francuskiego czasownika 'dmuchać' i, jak sama nazwa wskazuje, jest to lekki, zwiewny deser. Potrawa ta pochodzi z początku XVIII wieku, a obecnie jest podstawą menu deserowego na całym świecie. Chrupiąca, czekoladowa skórka doskonale nadaje się do tego, aby kremowa czekolada mogła wypłynąć na wierzch, sprawiając bogatą niespodziankę. Suflet nie musi być jednak słodki. Jeśli masz ochotę na coś bardziej słonego, suflety serowe są równie pyszne.",
+        "Status": "true"
+        
     },
     {
         "ID":3,
         "Name": "Soupe à l’oignon",
         "Country": "Francja",
         "ImgUrl": "https://www.expatica.com/app/uploads/sites/5/2014/05/french-onion-soup-1536x1024.jpg",
-        "Description": "Jest to tradycyjna francuska zupa z cebuli i wywaru wołowego, zwykle podawana z grzankami i serem topionym na wierzchu. Zupa pochodzi jeszcze z czasów rzymskich i tradycyjnie była daniem chłopskim, choć jej obecna wersja pochodzi z XVIII wieku. Wyjątkowy smak zupy pochodzi z karmelizacji cebuli, do której często dodaje się brandy lub sherry podczas powolnego gotowania. Jeśli masz ochotę na zupę, spróbuj tradycyjnej marsylskiej zupy z poisson a la rouille. Zupa ta, niegdyś ulubiona zupa rybaków, charakteryzuje się tym, że na wierzchu znajduje się odrobina majonezu czosnkowego i szafranowego."
+        "Description": "Jest to tradycyjna francuska zupa z cebuli i wywaru wołowego, zwykle podawana z grzankami i serem topionym na wierzchu. Zupa pochodzi jeszcze z czasów rzymskich i tradycyjnie była daniem chłopskim, choć jej obecna wersja pochodzi z XVIII wieku. Wyjątkowy smak zupy pochodzi z karmelizacji cebuli, do której często dodaje się brandy lub sherry podczas powolnego gotowania. Jeśli masz ochotę na zupę, spróbuj tradycyjnej marsylskiej zupy z poisson a la rouille. Zupa ta, niegdyś ulubiona zupa rybaków, charakteryzuje się tym, że na wierzchu znajduje się odrobina majonezu czosnkowego i szafranowego.",
+        "Status": "true"
+
     },
     {
         "ID":4,
         "Name": "Coq au vin",
         "Country": "Francja",
         "ImgUrl": "https://www.expatica.com/app/uploads/sites/5/2014/05/coq-au-vin-1-1536x1024.jpg",
-        "Description": "This quintessential French food was popularized by Julia Child, becoming one of her signature dishes. The dish sees chicken braised with wine, mushrooms, salty pork or bacon (lardons), mushrooms, onions, garlic and sometimes even a drop of brandy. Although the name translates as ‘rooster in wine’ – the braising is ideal for tougher birds – the recipe usually uses chicken or capon. The wine is typically Burgundy, although regional variations of the dish exist across France that use local wines. These include coq au vin jaune (Jura), coq au Riesling (Alsace), and coq au pourpre (Beaujolais nouveau). Believe it or not, there’s even a coq au Champagne (Champagne)."
+        "Description": "This quintessential French food was popularized by Julia Child, becoming one of her signature dishes. The dish sees chicken braised with wine, mushrooms, salty pork or bacon (lardons), mushrooms, onions, garlic and sometimes even a drop of brandy. Although the name translates as ‘rooster in wine’ – the braising is ideal for tougher birds – the recipe usually uses chicken or capon. The wine is typically Burgundy, although regional variations of the dish exist across France that use local wines. These include coq au vin jaune (Jura), coq au Riesling (Alsace), and coq au pourpre (Beaujolais nouveau). Believe it or not, there’s even a coq au Champagne (Champagne).",
+        "Status": "true"
     },
     {
         "ID":5,
         "Name": "Cassoulet",
         "Country": "Francja",
         "ImgUrl": "https://www.expatica.com/app/uploads/sites/5/2014/05/cassoulet-1536x1024.jpg",
-        "Description": "Cassoulet to wygodne danie z białej fasoli duszonej powoli z mięsem. W daniu zazwyczaj wykorzystuje się wieprzowinę lub kaczkę, ale można też dodać kiełbasę, gęś, baraninę lub cokolwiek innego, co akurat szef kuchni ma pod ręką. To chłopskie danie wywodzi się z południowej Francji i jest popularne w Tuluzie, Carcassonne i Castelnaudary. Nazwa potrawy pochodzi od garnka (cassole), w którym jest ona tradycyjnie pieczona. Garnek ten jest podstawą w wielu francuskich domach, co podkreśla popularność tego bogatego, obfitego posiłku, który jest idealny na chłodniejsze miesiące."
+        "Description": "Cassoulet to wygodne danie z białej fasoli duszonej powoli z mięsem. W daniu zazwyczaj wykorzystuje się wieprzowinę lub kaczkę, ale można też dodać kiełbasę, gęś, baraninę lub cokolwiek innego, co akurat szef kuchni ma pod ręką. To chłopskie danie wywodzi się z południowej Francji i jest popularne w Tuluzie, Carcassonne i Castelnaudary. Nazwa potrawy pochodzi od garnka (cassole), w którym jest ona tradycyjnie pieczona. Garnek ten jest podstawą w wielu francuskich domach, co podkreśla popularność tego bogatego, obfitego posiłku, który jest idealny na chłodniejsze miesiące.",
+        "Status": "true"
     },
     {
         "ID":6,
         "Name": "Flamiche",
         "Country": "Francja",
         "ImgUrl": "https://www.expatica.com/app/uploads/sites/5/2014/05/flamiche-1536x1024.jpg",
-        "Description": "Flamiche oznacza w języku niderlandzkim 'ciasto', a to danie pochodzi z północnej Francji, niedaleko granicy z Belgią. Jest to danie z ciasta francuskiego wypełnione serem i warzywami, przypominające quiche. Tradycyjnym nadzieniem są pory i śmietana, choć istnieją różne warianty. Istnieje również wersja flamiche przypominająca pizzę, która nie zawiera górnej warstwy ciasta. Na południu Francji można spróbować cienkiego, chrupiącego placka pissaladière z anchois, cebulą i oliwkami."
+        "Description": "Flamiche oznacza w języku niderlandzkim 'ciasto', a to danie pochodzi z północnej Francji, niedaleko granicy z Belgią. Jest to danie z ciasta francuskiego wypełnione serem i warzywami, przypominające quiche. Tradycyjnym nadzieniem są pory i śmietana, choć istnieją różne warianty. Istnieje również wersja flamiche przypominająca pizzę, która nie zawiera górnej warstwy ciasta. Na południu Francji można spróbować cienkiego, chrupiącego placka pissaladière z anchois, cebulą i oliwkami.",
+        "Status": "true"
     },
     {
         "ID":7,
         "Name": "Confit de canard",
         "Country": "Francja",
         "ImgUrl": "https://www.expatica.com/app/uploads/sites/5/2014/05/confit-de-canard-1536x1024.jpg",
-        "Description": "Confit de canard to smaczne francuskie danie z kaczki - choć niektórzy szefowie kuchni używają gęsi lub wieprzowiny - i jest jednym z najlepszych francuskich dań. Mięso jest specjalnie przygotowywane przy użyciu starożytnego procesu konserwowania i powolnego gotowania (confit). Polega on na tym, że mięso kaczki marynuje się w soli, czosnku i tymianku przez około 36 godzin, a następnie gotuje na wolnym ogniu we własnym tłuszczu w niskiej temperaturze. Jest to zdrowsza alternatywa dla smażenia. Zazwyczaj podaje się ją z pieczonymi ziemniakami confit i czosnkiem. Obecnie danie to jest popularne w całej Francji, choć najlepsze jego odmiany można znaleźć w regionie Gaskonii."
+        "Description": "Confit de canard to smaczne francuskie danie z kaczki - choć niektórzy szefowie kuchni używają gęsi lub wieprzowiny - i jest jednym z najlepszych francuskich dań. Mięso jest specjalnie przygotowywane przy użyciu starożytnego procesu konserwowania i powolnego gotowania (confit). Polega on na tym, że mięso kaczki marynuje się w soli, czosnku i tymianku przez około 36 godzin, a następnie gotuje na wolnym ogniu we własnym tłuszczu w niskiej temperaturze. Jest to zdrowsza alternatywa dla smażenia. Zazwyczaj podaje się ją z pieczonymi ziemniakami confit i czosnkiem. Obecnie danie to jest popularne w całej Francji, choć najlepsze jego odmiany można znaleźć w regionie Gaskonii.",
+        "Status": "true"
     },
     {
         "ID":8,
         "Name": "Salade Niçoise",
         "Country": "Francja",
         "ImgUrl": "https://www.expatica.com/app/uploads/sites/5/2014/05/salade-nic%CC%A7oise-1536x1024.jpg",
-        "Description": "Salade Niçoise to typowa francuska sałatka z regionu Prowansji. Często jada się ją jako dodatek do dań, ale może też stanowić samodzielny lekki posiłek. Sałatka składa się z sałaty, świeżych pomidorów, gotowanych jajek, tuńczyka (z puszki lub świeżego), zielonej fasolki, oliwek Nicoise Cailletier i anchois. Można jednak wybierać spośród wielu różnych wariantów. Jeśli więc masz problem z wymyśleniem idealnego letniego menu, dlaczego nie zastanowić się nad Salade Niçoise?"
+        "Description": "Salade Niçoise to typowa francuska sałatka z regionu Prowansji. Często jada się ją jako dodatek do dań, ale może też stanowić samodzielny lekki posiłek. Sałatka składa się z sałaty, świeżych pomidorów, gotowanych jajek, tuńczyka (z puszki lub świeżego), zielonej fasolki, oliwek Nicoise Cailletier i anchois. Można jednak wybierać spośród wielu różnych wariantów. Jeśli więc masz problem z wymyśleniem idealnego letniego menu, dlaczego nie zastanowić się nad Salade Niçoise?",
+        "Status": "true"
     },
     {
         "ID":9,
         "Name": "Tarte Tatin",
         "Country": "Francja",
         "ImgUrl": "https://www.expatica.com/app/uploads/sites/5/2014/05/tarte-tatin-1536x1024.jpg",
-        "Description": "Zgodnie z legendą kulinarną, tarte Tatin zaczęło się od pomyłki. W 1898 r. hotelarka Stephanie Tatin przygotowywała tradycyjną szarlotkę, gdy przez przypadek zostawiła jabłka zbyt długo gotujące się w cukrze i maśle. Chcąc ratować deser, położyła spód z ciasta na płonących owocach i wstawiła go do piekarnika. Podobno podała odwróconą do góry nogami tartę swoim gościom w Hôtel Tatin, a rezultat stał się popisowym daniem hotelu. I do dziś możemy skosztować tej doskonałej pomyłki."
+        "Description": "Zgodnie z legendą kulinarną, tarte Tatin zaczęło się od pomyłki. W 1898 r. hotelarka Stephanie Tatin przygotowywała tradycyjną szarlotkę, gdy przez przypadek zostawiła jabłka zbyt długo gotujące się w cukrze i maśle. Chcąc ratować deser, położyła spód z ciasta na płonących owocach i wstawiła go do piekarnika. Podobno podała odwróconą do góry nogami tartę swoim gościom w Hôtel Tatin, a rezultat stał się popisowym daniem hotelu. I do dziś możemy skosztować tej doskonałej pomyłki.",
+        "Status": "true"
     }
 ]

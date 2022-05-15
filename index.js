@@ -18,6 +18,44 @@ function BackToCard() {
   }, 950);
 }
 
+function CreateCard(FoodID,FoodName,FoodCountry,ImgUrl,FoodDescription) {
+  const atag = document.createElement("a")
+      atag.setAttribute('onclick', 'CardClick(this),BackToCard()');
+      atag.setAttribute('class', 'card');
+      document.getElementById('FoodGrid').appendChild(atag)
+      // CREATE DIV WITH BACKGROUND-IMAGE
+      const divImg = document.createElement('div')
+      divImg.setAttribute('class','image')
+      divImg.style.backgroundImage = "url('"+ImgUrl+"')"
+      atag.appendChild(divImg)
+      // CREATE H3
+      const h3 = document.createElement('h3')
+      atag.appendChild(h3)
+      // CREATE SPAN 'NAME'
+      const spanName = document.createElement('span')
+      spanName.setAttribute('class', 'CardFoodName');
+      spanName.textContent = FoodName
+      h3.appendChild(spanName)
+      // CREATE BR
+      const br = document.createElement('br')
+      h3.appendChild(br)
+      // CREATE SPAN 'COUNTRY'
+      const spanCountry = document.createElement('span')
+      spanCountry.setAttribute('class', 'CardFoodCountry');
+      spanCountry.textContent = FoodCountry
+      h3.appendChild(spanCountry)
+      // CREATE SPAN 'DESCRIPTION'
+      const spanDescription = document.createElement('span')
+      spanDescription.setAttribute('class', 'hide CardFoodDescription');
+      spanDescription.textContent = FoodDescription
+      h3.appendChild(spanDescription)
+      // CREATE SPAN 'ID'
+      const spanId = document.createElement('span')
+      spanId.setAttribute('class', 'hide CardFoodId');
+      spanId.textContent = FoodID
+      h3.appendChild(spanId)
+}
+
 function CardClick(object) {
   // GET FOOD DESCRIPTION
   const FName = object.children[1].children[0].textContent
@@ -34,50 +72,21 @@ function CardClick(object) {
   ViewFoodCard.children[2].children[0].children[1].textContent = FDescription
 }
 
-const req = new XMLHttpRequest();
-req.open("GET",'food.json',true)
-req.send()
-req.onload = function() {
-  const json = JSON.parse(req.responseText)
+// const req = new XMLHttpRequest();
+// req.open("GET",'food.json',true)
+// req.send()
+// req.onload = function() {
+//   const json = JSON.parse(req.responseText)
 
-  json.forEach((food) => {
-    let keys = Object.keys(food)
-    // console.log(keys)
-    // CREATE A MAIN BOX
-    const atag = document.createElement("a")
-    atag.setAttribute('onclick', 'CardClick(this),BackToCard()');
-    atag.setAttribute('class', 'card');
-    document.getElementById('FoodGrid').appendChild(atag)
-    // CREATE DIV WITH BACKGROUND-IMAGE
-    const divImg = document.createElement('div')
-    divImg.setAttribute('class','image')
-    divImg.style.backgroundImage = "url('"+food[keys[3]]+"')"
-    atag.appendChild(divImg)
-    // CREATE H3
-    const h3 = document.createElement('h3')
-    atag.appendChild(h3)
-    // CREATE SPAN 'NAME'
-    const spanName = document.createElement('span')
-    spanName.setAttribute('class', 'CardFoodName');
-    spanName.textContent = food[keys[1]]
-    h3.appendChild(spanName)
-    // CREATE BR
-    const br = document.createElement('br')
-    h3.appendChild(br)
-    // CREATE SPAN 'COUNTRY'
-    const spanCountry = document.createElement('span')
-    spanCountry.setAttribute('class', 'CardFoodCountry');
-    spanCountry.textContent = food[keys[2]]
-    h3.appendChild(spanCountry)
-    // CREATE SPAN 'DESCRIPTION'
-    const spanDescription = document.createElement('span')
-    spanDescription.setAttribute('class', 'hide CardFoodDescription');
-    spanDescription.textContent = food[keys[4]]
-    h3.appendChild(spanDescription)
-    // CREATE SPAN 'ID'
-    const spanId = document.createElement('span')
-    spanId.setAttribute('class', 'hide CardFoodId');
-    spanId.textContent = food[keys[0]]
-    h3.appendChild(spanId)
-  })
-}
+//   json.forEach((food) => {
+//     let keys = Object.keys(food)
+//     // console.log(keys)
+//     // CREATE A MAIN BOX
+//     if (food[keys[5]] == 'true') {
+//       // Odwołanie do funkcji [ Tworzenie karty jedzenia ]
+//       CreateCard(food[keys[0]],food[keys[1]],food[keys[2]],food[keys[3]],food[keys[4]])
+//     } else if(food[keys[5]] == 'false') {
+//       console.log("Wyłączone")
+//     }
+//   })
+// }

@@ -1,5 +1,25 @@
 {
   "dependencies": {
-    "firebase": "^9.8.1"
-  }
+    "firebase": "^9.8.1",
+    "init": "^0.1.2",
+    "node.js": "^0.0.1-security"
+  },
+  "name": "foodapp",
+  "description": "https://mrwoodsman.github.io/FoodApp/",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MrWoodsman/FoodApp.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MrWoodsman/FoodApp/issues"
+  },
+  "homepage": "https://github.com/MrWoodsman/FoodApp#readme"
 }
