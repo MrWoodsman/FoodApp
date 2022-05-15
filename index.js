@@ -19,7 +19,7 @@ function BackToCard() {
 }
 
 function CreateCard(FoodID,FoodName,FoodCountry,ImgUrl,FoodDescription) {
-  const atag = document.createElement("a")
+      const atag = document.createElement("a")
       atag.setAttribute('onclick', 'CardClick(this),BackToCard()');
       atag.setAttribute('class', 'card');
       document.getElementById('FoodGrid').appendChild(atag)
@@ -56,6 +56,21 @@ function CreateCard(FoodID,FoodName,FoodCountry,ImgUrl,FoodDescription) {
       h3.appendChild(spanId)
 }
 
+function UpdateCard(FoodID,FoodName,FoodCountry,ImgUrl,FoodDescription) {
+  console.log('Aktalizowanie danych karty o id: '+FoodID)
+  const CardList = document.querySelectorAll('.card')
+
+  for (i=0;i<CardList.length;i++) {
+    // console.log(CardList[i].children[1].children[4].textContent)
+    if(FoodID == CardList[i].children[1].children[4].textContent) {
+      CardList[i].style.backgroundImage = ImgUrl
+      CardList[i].children[1].children[0].textContent = FoodName
+      CardList[i].children[1].children[2].textContent = FoodCountry
+      CardList[i].children[1].children[3].textContent = FoodDescription
+    }
+  }
+}
+
 function CardClick(object) {
   // GET FOOD DESCRIPTION
   const FName = object.children[1].children[0].textContent
@@ -71,22 +86,3 @@ function CardClick(object) {
   ViewFoodCard.children[2].children[0].children[0].children[1].textContent = FCountry
   ViewFoodCard.children[2].children[0].children[1].textContent = FDescription
 }
-
-// const req = new XMLHttpRequest();
-// req.open("GET",'food.json',true)
-// req.send()
-// req.onload = function() {
-//   const json = JSON.parse(req.responseText)
-
-//   json.forEach((food) => {
-//     let keys = Object.keys(food)
-//     // console.log(keys)
-//     // CREATE A MAIN BOX
-//     if (food[keys[5]] == 'true') {
-//       // Odwołanie do funkcji [ Tworzenie karty jedzenia ]
-//       CreateCard(food[keys[0]],food[keys[1]],food[keys[2]],food[keys[3]],food[keys[4]])
-//     } else if(food[keys[5]] == 'false') {
-//       console.log("Wyłączone")
-//     }
-//   })
-// }

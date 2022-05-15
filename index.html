@@ -8,30 +8,30 @@
     <title>FoodApp</title>
 </head>
 <body>
-<!-- VIEW - FoodGrid -->
-<section id="BodyFoodGridCard">
-    <!-- NAWIGACJA STRONY UP -->
-    <nav><h3>Food List</h3></nav>
-    <!-- LISTA DAN -->
-    <section id="FoodGrid"></section>
-</section>
-<!-- VIEW - FoodCard -->
-<section id="BodyFoodCard">
-    <!-- BACK BUTTON -->
-    <a href="#" id="back_btn" class="previous round" onclick="BackToGrid()"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Ic_arrow_back_48px.svg/1024px-Ic_arrow_back_48px.svg.png" alt=""></a>
-    <!-- TOP FOOD IMAGE -->
-    <div id="top_background"></div>
-    <!-- MAIN CARD -->
-    <div id="bottom_card">
-        <div>
-            <!-- NAZWA DANIA / KRAJ DANIA -->
-            <h2><span id="foodName">Nazwa</span> <span id="foodCountry">Kraj</span></h2>
-            <!-- OPIS DANIA -->
-            <p id="foodDescription" class=""><span class="tab"></span>OPIS</p>
+    <!-- <button onclick="UpdateCard(1)">TEST</button> -->
+    <!-- VIEW - FoodGrid -->
+    <section id="BodyFoodGridCard">
+        <!-- NAWIGACJA STRONY UP -->
+        <nav><h3>Food List</h3></nav>
+        <!-- LISTA DAN -->
+        <section id="FoodGrid"></section>
+    </section>
+    <!-- VIEW - FoodCard -->
+    <section id="BodyFoodCard">
+        <!-- BACK BUTTON -->
+        <a href="#" id="back_btn" class="previous round" onclick="BackToGrid()"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Ic_arrow_back_48px.svg/1024px-Ic_arrow_back_48px.svg.png" alt=""></a>
+        <!-- TOP FOOD IMAGE -->
+        <div id="top_background"></div>
+        <!-- MAIN CARD -->
+        <div id="bottom_card">
+            <div>
+                <!-- NAZWA DANIA / KRAJ DANIA -->
+                <h2><span id="foodName">Nazwa</span> <span id="foodCountry">Kraj</span></h2>
+                <!-- OPIS DANIA -->
+                <p id="foodDescription" class=""><span class="tab"></span>OPIS</p>
+            </div>
         </div>
-    </div>
-</section>
-<!--  -->
+    </section>
 </body>
     <script src="index.js"></script>
     <script type="module">
@@ -65,7 +65,8 @@
 
         // Aktualizacja Danych W czasie rzeczyswistym
         onChildChanged(commentsRef, (data) => {
-            console.log('Zaktualizowano: '+data.val()['Name'])
+            UpdateCard(data.val()['ID'],data.val()['Name'],data.val()['Country'],data.val()['ImgUrl'],data.val()['Description'])
+            // UpdateCard(data.val()['ID'],FoodName,FoodCountry,ImgUrl,FoodDescription)
         });
         
     </script>
