@@ -2,14 +2,30 @@ const ViewFoodGrid = document.getElementById('BodyFoodGridCard')
 const ViewFoodCard = document.getElementById('BodyFoodCard')
 
 function BackToGrid() {
+  var int = getCookie("ScrollTop")
   ViewFoodGrid.style.animationName = 'Rin'
   ViewFoodCard.style.animationName = 'Lout'
   ViewFoodGrid.style.display = 'block'
   setTimeout(() => {
+    window.scrollTo({
+      top: int,
+      left: 0,
+      behavior: 'auto'
+    });
+  }, 100);
+  setTimeout(() => {
+    ViewFoodCard.style.visibility = 'hidden'
     ViewFoodCard.style.display = 'fixed'
+    window.scrollTo({
+      top: int,
+      left: 0,
+      behavior: 'auto'
+    });
   }, 950);
 }
 function BackToCard() {
+  ViewFoodCard.style.visibility = 'visible'
+  setCookie("ScrollTop", document.documentElement.scrollTop)
   ViewFoodGrid.style.animationName = 'Rout'
   ViewFoodCard.style.animationName = 'Lin'
   ViewFoodCard.style.display = 'block'
@@ -18,7 +34,7 @@ function BackToCard() {
   }, 950);
 }
 
-function CreateCard(FoodID,FoodName,FoodCountry,ImgUrl,FoodDescription) {
+function CreateCard(FoodName,FoodCountry,ImgUrl,FoodDescription,DbName) {
       const atag = document.createElement("a")
       atag.setAttribute('onclick', 'CardClick(this),BackToCard()');
       atag.setAttribute('class', 'card');
@@ -34,7 +50,13 @@ function CreateCard(FoodID,FoodName,FoodCountry,ImgUrl,FoodDescription) {
       // CREATE SPAN 'NAME'
       const spanName = document.createElement('span')
       spanName.setAttribute('class', 'CardFoodName');
-      spanName.textContent = FoodName
+      if(FoodName == null || FoodName == ''){
+        spanName.textContent = "Brak Nazwy"
+        spanName.setAttribute('class', 'brak');
+      } else {
+        spanName.textContent = FoodName
+        spanName.setAttribute('class', 'CardFoodName');
+      }
       h3.appendChild(spanName)
       // CREATE BR
       const br = document.createElement('br')
@@ -42,7 +64,13 @@ function CreateCard(FoodID,FoodName,FoodCountry,ImgUrl,FoodDescription) {
       // CREATE SPAN 'COUNTRY'
       const spanCountry = document.createElement('span')
       spanCountry.setAttribute('class', 'CardFoodCountry');
-      spanCountry.textContent = FoodCountry
+      if(FoodCountry == null || FoodCountry == '' ){
+        spanCountry.textContent = "Brak państwa"
+        spanCountry.setAttribute('class', 'brak');
+      } else {
+        spanCountry.textContent = FoodCountry
+        spanCountry.setAttribute('class', 'CardFoodCountry');
+      }
       h3.appendChild(spanCountry)
       // CREATE SPAN 'DESCRIPTION'
       const spanDescription = document.createElement('span')
@@ -50,23 +78,52 @@ function CreateCard(FoodID,FoodName,FoodCountry,ImgUrl,FoodDescription) {
       spanDescription.textContent = FoodDescription
       h3.appendChild(spanDescription)
       // CREATE SPAN 'ID'
-      const spanId = document.createElement('span')
-      spanId.setAttribute('class', 'hide CardFoodId');
-      spanId.textContent = FoodID
-      h3.appendChild(spanId)
+      // const spanId = document.createElement('span')
+      // spanId.setAttribute('class', 'hide CardFoodId');
+      // spanId.textContent = FoodID
+      // h3.appendChild(spanId)
+      const spanDbName = document.createElement('span')
+      spanDbName.setAttribute('class', 'hide DbName');
+      spanDbName.textContent = DbName
+      h3.appendChild(spanDbName)
 }
 
-function UpdateCard(FoodID,FoodName,FoodCountry,ImgUrl,FoodDescription) {
-  console.log('Aktalizowanie danych karty o id: '+FoodID)
+function UpdateCard(FoodName,FoodCountry,ImgUrl,FoodDescription,DbName) {
+  console.log('Aktalizowanie danych karty o id: '+FoodName)
+  const CardList = document.querySelectorAll('.card')
+
+  for (i=0;i<CardList.length;i++) {
+    // console.log(CardList[i].children[1].children[4].textContent)
+    if(DbName == CardList[i].children[1].children[4].textContent) {
+      CardList[i].children[0].style.backgroundImage = "url('"+ImgUrl+"')"
+      if(FoodName == null || FoodName == ''){
+        CardList[i].children[1].children[0].textContent = "Brak Nazwy"
+        CardList[i].children[1].children[0].setAttribute('class', 'brak');
+      } else {
+        CardList[i].children[1].children[0].textContent = FoodName
+        CardList[i].children[1].children[0].setAttribute('class', 'CardFoodName');
+      }
+      if(FoodCountry == null || FoodCountry == ''){
+        CardList[i].children[1].children[2].textContent = "Brak państwa"
+        CardList[i].children[1].children[2].setAttribute('class', 'brak');
+      } else {
+        CardList[i].children[1].children[2].textContent = FoodCountry
+        CardList[i].children[1].children[2].setAttribute('class', 'CardFoodCountry');
+      }
+      CardList[i].children[1].children[3].textContent = FoodDescription
+      CardList[i].children[1].children[4].textContent = DbName
+    }
+  }
+}
+
+function DelateCard(FoodID) {
+  console.log('Usuwanie karty o id: '+FoodID)
   const CardList = document.querySelectorAll('.card')
 
   for (i=0;i<CardList.length;i++) {
     // console.log(CardList[i].children[1].children[4].textContent)
     if(FoodID == CardList[i].children[1].children[4].textContent) {
-      CardList[i].style.backgroundImage = ImgUrl
-      CardList[i].children[1].children[0].textContent = FoodName
-      CardList[i].children[1].children[2].textContent = FoodCountry
-      CardList[i].children[1].children[3].textContent = FoodDescription
+      CardList[i].remove()
     }
   }
 }
@@ -86,3 +143,5 @@ function CardClick(object) {
   ViewFoodCard.children[2].children[0].children[0].children[1].textContent = FCountry
   ViewFoodCard.children[2].children[0].children[1].textContent = FDescription
 }
+
+// document.documentElement.scrollTop

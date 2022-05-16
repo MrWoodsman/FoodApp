@@ -34,15 +34,13 @@
     </section>
 </body>
     <script src="index.js"></script>
+    <script src="Cookie.js"></script>
+    <script src="test.js" type="module"></script>
     <script type="module">
         // Import the functions you need from the SDKs you need
         import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.1/firebase-app.js";
-        import { getDatabase, ref, onChildAdded, onChildChanged, onChildRemoved } from "https://www.gstatic.com/firebasejs/9.8.1/firebase-database.js";
-        // TODO: Add SDKs for Firebase products that you want to use
-        // https://firebase.google.com/docs/web/setup#available-libraries
-      
-        // Your web app's Firebase configuration
-        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        import { getDatabase, ref, set, query, onChildAdded, onChildChanged, onChildRemoved } from "https://www.gstatic.com/firebasejs/9.8.1/firebase-database.js";
+
         const firebaseConfig = {
           apiKey: "AIzaSyA71QuzTtYpfSDqzFHLshI6wUGQ8LpJseI",
           authDomain: "myapp-44c66.firebaseapp.com",
@@ -56,19 +54,22 @@
         const app = initializeApp(firebaseConfig);
         // Create a new post reference with an auto-generated id
         const db = getDatabase();
-        const commentsRef = ref(db, 'food');
+        const commentsRef = query(ref(db, 'food'));
+        // const test = query(commentsRef, orderBy("Date"), limit(3));
         // Dodawanie Kart na początku
         onChildAdded(commentsRef, (data) => {
-            CreateCard(data.val()['ID'],data.val()['Name'],data.val()['Country'],data.val()['ImgUrl'],data.val()['Description'])
+            CreateCard(data.val()['Name'],data.val()['Country'],data.val()['ImgUrl'],data.val()['Description'],data.key)
             // console.log(data.val()['Name'])
         });
-
         // Aktualizacja Danych W czasie rzeczyswistym
         onChildChanged(commentsRef, (data) => {
-            UpdateCard(data.val()['ID'],data.val()['Name'],data.val()['Country'],data.val()['ImgUrl'],data.val()['Description'])
+            UpdateCard(data.val()['Name'],data.val()['Country'],data.val()['ImgUrl'],data.val()['Description'],data.key)
             // UpdateCard(data.val()['ID'],FoodName,FoodCountry,ImgUrl,FoodDescription)
         });
-        
+        // Usuwanie Kart w czasie rzeczywistym
+        onChildRemoved(commentsRef, (data) => {
+            DelateCard(data.key)
+        });
     </script>
 </html>
 

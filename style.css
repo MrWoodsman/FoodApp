@@ -31,6 +31,7 @@ body {
     animation-fill-mode: forwards;
 }
 #BodyFoodCard {
+    visibility: hidden;
     z-index: 0;
     position: fixed;
     width: 100vw;
@@ -91,7 +92,7 @@ body {
 }
 #BodyFoodGridCard .card h3 .CardFoodCountry {
     font-size: clamp(4px,4vw,15);
-
+    color:  rgb(60, 60, 60);
 }
 @media only screen and (max-width: 509px) {
     #BodyFoodGridCard .card {
@@ -113,7 +114,6 @@ body {
     }
     #BodyFoodGridCard .card h3 .CardFoodCountry {
         font-size: clamp(4px,5.5,18px);
-    
     }
 }
 #BodyFoodGridCard .card:hover{
@@ -244,4 +244,8 @@ body {
 }
 .hide {
     display: none;
+}
+
+.brak {
+    color: rgb(226, 0, 0);
 }
