@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+/* 
+font-family: 'Oswald', sans-serif;
+*/
+:root {
+    /* --dev_color: red; */
+    --card_margin: 20px;
+}
+
+#superBox {
+    width: 50px;
+    height: 50px;
+    background: red;
+    position: fixed;
+    z-index: 9999;
+}
+
+body {
+    overflow-x: hidden;
+    margin: 0px;
+}
+
+#BodyFoodGridCard {
+    z-index: 10;
+    background: white;
+    position: absolute;
+    width: 100vw;
+    height: 100%;
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+#BodyFoodCard {
+    visibility: hidden;
+    z-index: 0;
+    position: fixed;
+    width: 100vw;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes Lout {
+    from {transform: translateX(0%);}
+    to {transform: translateX(100%);}
+}
+@keyframes Lin {
+    from {transform: translateX(100%);}
+    to {transform: translateX(0%);}
+}
+@keyframes Rout {
+    from {transform: translateX(0%);}
+    to {transform: translateX(-100%);}
+}
+@keyframes Rin {
+    from {transform: translateX(-100%);}
+    to {transform: translateX(0%);}
+}
+
+
+#BodyFoodGridCard nav {
+    width: 100%;
+    background: rgb(223, 223, 223);
+}
+#BodyFoodGridCard nav h3{
+    margin: 0;
+    font-family: 'Oswald', sans-serif;
+    padding: calc(var(--card_margin) - 5px) var(--card_margin);
+}
+#BodyFoodGridCard #FoodGrid {
+    margin: var(--card_margin) auto;
+    width: calc(100% - var(--card_margin) * 2);
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-column-gap: 10px;
+    grid-row-gap: 20px;
+    padding-bottom: 30px;
+}
+#BodyFoodGridCard .new::after {
+    content: 'NEW';
+    font-family: 'Oswald', sans-serif;
+    margin: 0px;
+    padding: 5px 15px;
+    font-weight: bold;
+    color: black;
+    letter-spacing: 1px;
+    background: rgba(0, 255, 76, .3);
+    /* border: 1px white solid; */
+    box-shadow: inset rgba(255, 255, 255, 0.4) 2px 2px 5px,inset rgba(0, 0, 0, 0.4) -2px -2px 5px;
+    /* box-shadow: rgb(0, 184, 55) 0px 0px 5px 1px; */
+    backdrop-filter: blur(5px);
+    border-radius: 20px;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    animation: newAnimatino .5s forwards;
+    animation-delay: .5s;
+    transform: scale(0);
+} 
+@keyframes newAnimatino {
+    to {transform: scale(1);}
+}
+#BodyFoodGridCard .card {
+    position: relative;
+    background-color: rgb(212, 212, 212);
+    aspect-ratio: 14.5/16;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, .5) 0px 0px 5px 1px;
+    transition: .25s background-color;
+    opacity: 0;
+    animation: CardCreate 1s forwards;
+}
+@keyframes CardCreate {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+#BodyFoodGridCard .card h3 {
+    font-family: 'Oswald', sans-serif;
+    /* white-space: nowrap; */
+    margin: 5px 0 0 10px;
+    width: 100%;
+    font-size: clamp(9px,4vw,18px);
+}
+#BodyFoodGridCard .card h3 .CardFoodCountry {
+    font-size: clamp(4px,4vw,15);
+    color:  rgb(60, 60, 60);
+}
+@media only screen and (max-width: 509px) {
+    #BodyFoodGridCard .card {
+        /* background-color: rgb(150, 40, 40); */
+        aspect-ratio: 15.5/16;
+    }
+}
+@media only screen and (max-width: 349px) {
+    #BodyFoodGridCard .card {
+        /* background-color: rgb(250, 41, 41); */
+        aspect-ratio: 17/16;
+    }
+    #BodyFoodGridCard .card h3 {
+        font-family: 'Oswald', sans-serif;
+        /* white-space: nowrap; */
+        margin: 5px 0 0 10px;
+        width: 100%;
+        font-size: clamp(9px,5.5vw,25px);
+    }
+    #BodyFoodGridCard .card h3 .CardFoodCountry {
+        font-size: clamp(4px,5.5,18px);
+    }
+}
+#BodyFoodGridCard .card:hover{
+    background-color: rgb(199, 199, 199);
+}
+#BodyFoodGridCard .card .image {
+    background: rgb(185, 185, 185);
+    width: 100%;
+    aspect-ratio: 16/11;
+    border-radius: 10px 10px 0 0;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    box-shadow: inset rgb(212, 212, 212) 0px -30px 15px -10px;
+    transition: .25s box-shadow;
+}
+#BodyFoodGridCard .card:hover .image{
+    box-shadow: inset rgb(199, 199, 199) 0px -30px 15px -10px;
+}
+#back_btn {
+    z-index: 10;
+    top: 15px;
+    left: 15px;
+    position: absolute;
+    text-decoration: none;
+    width: clamp(30px,8vw,50px);
+    aspect-ratio: 1;
+    font-size: 35px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(5px);
+    box-shadow: rgba(0, 0, 0, 0.5) 2px 2px 2px, inset rgba(255, 255, 255, 0.25) 2px 2px 5px;
+    transition: .25s background;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+#back_btn:hover {
+    background: rgba(209, 209, 209, 0.5);
+}
+#back_btn img {
+    position: absolute;
+    width: 80%;
+
+}
+
+#top_background {
+    /* Background */
+    width: 100%;
+    height: 30vh;
+    /* aspect-ratio: 16/9; */
+    background-image: url('https://www.expatica.com/app/uploads/sites/5/2014/05/french-food-1920x1080.jpg');
+    background-position: center;
+    background-size: cover;
+    transition: .25s aspect-ratio;
+    /* Shadow */
+    /* box-shadow: rgb(255, 255, 255) 0px 10px 0; */
+    /* position: relative; */
+}
+#top_background::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    /* background: red; */
+    backdrop-filter: blur(5px);
+    animation: load 1s forwards;
+    animation-delay: .75s;
+}
+@keyframes load {
+    from {backdrop-filter: blur(5px);}
+    to {backdrop-filter: blur(0px);}
+  }
+#bottom_card {
+    font-family: 'Oswald', sans-serif;
+    width: 100%;
+    transform: translateY(-30px);
+    background: white;
+    padding-bottom: 50px;
+    box-shadow: black 0px 0px 7px 2px;
+    border-radius: 15px 15px 0 0;
+}
+#bottom_card::after {
+    content: '';
+    width: 100%;
+    height: 20px;
+    bottom: 0;
+    transform: translateY(10px);
+    position: absolute;
+    background: white;
+}
+#bottom_card div {
+    background: var(--dev_color);
+    width: calc(100% - var(--card_margin) * 2);
+    margin: var(--card_margin);
+    transform: translateY(var(--card_margin));
+    height: calc(100% - var(--card_margin) * 2);
+}
+#bottom_card div h2 #foodName {
+    color: black;
+    margin: 0;
+    font-size: clamp(10px,9.5vw,40px);
+    white-space: nowrap;
+}
+#bottom_card div p {
+    color: black;
+    font-size: clamp(7px,3.55vw,20px);
+    position: relative;
+}
+#bottom_card div p.hide::after {
+    content: '';
+    background: white;
+    width: 100%;
+    height: 10px;
+    left: 0;
+    bottom: 0;
+    position: absolute;
+    box-shadow: white 0 -15px 50px 50px;
+}
+#bottom_card div h2 #foodCountry {
+    color: rgb(60, 60, 60);
+    font-size: clamp(5px,4vw,20px);
+
+}
+#bottom_card div h2::before {
+    content: '◆ ';
+}
+
+.tab {
+    display: inline-block;
+    margin-left: clamp(10px,9.5vw,40px);
+}
+.hide {
+    display: none;
+}
+
+.brak {
+    color: rgb(226, 0, 0);
+}
+#settings {
+    display: none;
+}

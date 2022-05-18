@@ -1,0 +1,49 @@
+table {
+    width: 100%;
+}
+
+td {
+    padding: 10px 10px;
+}
+
+table, tr, th, td {
+    border: 2px solid rgb(0, 0, 0);
+    border-collapse: collapse;
+}
+
+th {
+    background-color: #04AA6D;
+}
+
+tr:nth-child(even) {
+    background: rgba(0, 0, 0, 0.25);
+}
+
+input {
+}
+
+#ItemList {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* grid-template-columns: repeat(auto-fill, minmax(100%, 1fr)); */
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+}
+
+.RecordCard {
+    padding: 0px 15px;
+    border: 0px solid black;
+    display: flex;
+    /* grid-template-rows: repeat(auto-fill, minmax(50px, 150px)); */
+    position: relative;
+    background: red;
+}
+
+.RecordCard img {
+    width: 10%;
+    /* transform: translateX(-15px); */
+    /* width: calc(100% + 30px); */
+    /* aspect-ratio: 9/16; */
+    /* position: absolute; */
+}

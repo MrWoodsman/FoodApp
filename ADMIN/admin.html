@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="admincss.css">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <a href="index.html">Main Web</a> -->
+    <!-- <h3>Strona Admina</h3> -->
+    <button id="EDIT">EDIT</button>
+    <button id="ADD">ADD</button>
+    <button id="DELATE">DELATE</button>
+    <table id="table">
+        <tr>
+            <th>Database Name<br><input id="dbname" type="text"></th>
+            <th>Name<br><input id="foodname" type="text"></th>
+            <th>Country<br><input id="foodcountry" type="text"></th>
+            <!-- rows="4" cols="50" -->
+            <th>Description<br><textarea id="fooddescription" ></textarea></th>
+            <th>Image<br><input id="foodimage" type="text"></th>
+        </tr>
+        <div>
+
+        </div>
+    </table>
+
+    <div id="ItemList">
+
+    </div>
+
+</body>
+    <script src="test.js" type="module"></script>
+    <script src="admin.js"></script>
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.1/firebase-app.js";
+        import { getDatabase, ref, set, query, onChildAdded, onChildChanged, onChildRemoved } from "https://www.gstatic.com/firebasejs/9.8.1/firebase-database.js";
+
+        const firebaseConfig = {
+          apiKey: "AIzaSyA71QuzTtYpfSDqzFHLshI6wUGQ8LpJseI",
+          authDomain: "myapp-44c66.firebaseapp.com",
+          databaseURL: "https://myapp-44c66-default-rtdb.europe-west1.firebasedatabase.app",
+          projectId: "myapp-44c66",
+          storageBucket: "myapp-44c66.appspot.com",
+          messagingSenderId: "359396357809",
+          appId: "1:359396357809:web:c1690eb1d56dd5041d9490",
+          measurementId: "G-GJNX177MC2"
+        };
+        const app = initializeApp(firebaseConfig);
+        // Create a new post reference with an auto-generated id
+        const db = getDatabase();
+        const commentsRef = query(ref(db, 'food'));
+        // const test = query(commentsRef, orderBy("Date"), limit(3));
+        // Dodawanie Kart na początku
+        onChildAdded(commentsRef, (data) => {
+            CreateNewTable(data.key,data.val()['Name'],data.val()['Country'],data.val()['Description'],data.val()['ImgUrl'])
+        });     
+    </script>
+</html>

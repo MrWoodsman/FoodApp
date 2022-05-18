@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>FoodApp</title>
 </head>
 <body>
+    <!-- <button onclick="Test()">TEST</button> -->
     <!-- <button onclick="UpdateCard(1)">TEST</button> -->
     <!-- VIEW - FoodGrid -->
     <section id="BodyFoodGridCard">
@@ -26,57 +27,22 @@
         <div id="bottom_card">
             <div>
                 <!-- NAZWA DANIA / KRAJ DANIA -->
-                <h2><span id="foodName">Nazwa</span> <span id="foodCountry">Kraj</span></h2>
+                <h2><span id="foodName">Nazwa</span> <span id="foodCountry">Kraj</span><br><span id="Author">Autor</span></h2>
                 <!-- OPIS DANIA -->
                 <p id="foodDescription" class=""><span class="tab"></span>OPIS</p>
             </div>
         </div>
     </section>
+    <div id="settings">
+        <h3 class="NewTime"></h3>
+    </div>
 </body>
-    <script src="index.js"></script>
-    <script src="Cookie.js"></script>
-    <script src="test.js" type="module"></script>
-    <script type="module">
-        // Import the functions you need from the SDKs you need
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.1/firebase-app.js";
-        import { getDatabase, ref, set, query, onChildAdded, onChildChanged, onChildRemoved } from "https://www.gstatic.com/firebasejs/9.8.1/firebase-database.js";
-
-        const firebaseConfig = {
-          apiKey: "AIzaSyA71QuzTtYpfSDqzFHLshI6wUGQ8LpJseI",
-          authDomain: "myapp-44c66.firebaseapp.com",
-          databaseURL: "https://myapp-44c66-default-rtdb.europe-west1.firebasedatabase.app",
-          projectId: "myapp-44c66",
-          storageBucket: "myapp-44c66.appspot.com",
-          messagingSenderId: "359396357809",
-          appId: "1:359396357809:web:c1690eb1d56dd5041d9490",
-          measurementId: "G-GJNX177MC2"
-        };
-        const app = initializeApp(firebaseConfig);
-        // Create a new post reference with an auto-generated id
-        const db = getDatabase();
-        const commentsRef = query(ref(db, 'food'));
-        // const test = query(commentsRef, orderBy("Date"), limit(3));
-        // Dodawanie Kart na początku
-        onChildAdded(commentsRef, (data) => {
-            CreateCard(data.val()['Name'],data.val()['Country'],data.val()['ImgUrl'],data.val()['Description'],data.key)
-            // console.log(data.val()['Name'])
-        });
-        // Aktualizacja Danych W czasie rzeczyswistym
-        onChildChanged(commentsRef, (data) => {
-            UpdateCard(data.val()['Name'],data.val()['Country'],data.val()['ImgUrl'],data.val()['Description'],data.key)
-            // UpdateCard(data.val()['ID'],FoodName,FoodCountry,ImgUrl,FoodDescription)
-        });
-        // Usuwanie Kart w czasie rzeczywistym
-        onChildRemoved(commentsRef, (data) => {
-            DelateCard(data.key)
-        });
+    <script>
+        import { Test } from 'js/firebase/firebase.js'
     </script>
+    <script src="https://www.gstatic.com/firebasejs/9.8.1/firebase-app.js"></script>
+    <script type="module" src="js/firebase/firebase.js"></script>
+    <!--  -->
+    <script src="js/firebase/CreateFunctions.js"></script>
+    <script src="js/Cookie.js"></script>
 </html>
-
-<!-- var rootRef = firebase.database.ref();
-var urlRef = rootRef.child("user1/DAA Notes/URL");
-urlRef.once("value", function(snapshot) {
-  snapshot.forEach(function(child) {
-    console.log(child.key+": "+child.val());
-  });
-}); -->
