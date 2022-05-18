@@ -76,14 +76,14 @@ body {
     padding-bottom: 30px;
 }
 #BodyFoodGridCard .new::after {
-    content: 'NEW';
+    content: 'NOWE';
     font-family: 'Oswald', sans-serif;
     margin: 0px;
     padding: 5px 15px;
     font-weight: bold;
     color: black;
     letter-spacing: 1px;
-    background: rgba(0, 255, 76, .3);
+    background: rgba(34, 255, 100, 0.45);
     /* border: 1px white solid; */
     box-shadow: inset rgba(255, 255, 255, 0.4) 2px 2px 5px,inset rgba(0, 0, 0, 0.4) -2px -2px 5px;
     /* box-shadow: rgb(0, 184, 55) 0px 0px 5px 1px; */
